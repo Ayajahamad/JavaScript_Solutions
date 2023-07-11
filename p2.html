@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DataTypes</title>
+</head>
+<body>
+    <h1>Javascript DataTypes...!</h1>
+    <p>DataTypes are shows The Type of the Data. It Say's Any Particular variable Hold's which type of data</p>
+    <h4>Used - typeof() Method</h4>
+    <h3>Javascript Have 2 DataTypes</h3>
+    <ol>
+        <li>Premitive Datatype's</li>
+        <li>NonPremitive DataTypes</li>
+    </ol>
+
+    <h2>1. Premitive DataTypes</h2>
+    <p>There are & Premitive DataTypes</p>
+    <ol>
+        <li>Null</li>
+        <li>Number</li>
+        <li>Symbol</li>
+        <li>String</li>
+        <li>Boolean</li>
+        <li>BigInt</li>
+        <li>Undefined</li>
+    </ol>
+    <h2>2. NonPremitive DataTypes</h2>
+    <ol>
+        <li>Objects</li>
+    </ol>
+    <p>Key-Value Pairs</p>
+
+    <h5>Certainly! Here are some basic questions on JavaScript data types for you to solve: <br><br>
+
+        1. Write a program that declares a variable `num` and assigns it a numerical value. Check if the value of `num` is a positive number and store the result in a variable called `isPositive`. Finally, display the value of `isPositive` in the console. <br> <br>
+        
+        2. Write a program that declares a variable `text` and assigns it a string value. Determine the length of the string and store the result in a variable called `length`. Display the value of `length` in the console. <br><br>
+        
+        3. Write a program that declares an array called `fruits` containing three different fruit names. Add a new fruit to the array and store the resulting length of the array in a variable called `totalFruits`. Finally, display the value of `totalFruits` in the console. <br><br>
+        
+        4. Write a program that declares an object called `person` with properties `name`, `age`, and `country`. Assign appropriate values to these properties and display the person's information in the console. <br><br>
+        
+        5. Write a program that declares a variable `isTrue` and assigns it a boolean value. Check if the value of `isTrue` is `true` and store the result in a variable called `isValueTrue`. Finally, display the value of `isValueTrue` in the console. <br><br>
+        
+        These questions involve working with different data types in JavaScript such as numbers, strings, arrays, objects, and booleans. Solve them by writing the necessary code and executing the programs to get the expected output.</h5>
+
+    <script>
+        // 1. Write a program that declares a variable `num` and assigns it a numerical value. Check if the value of `num` is a positive number and store the result in a variable called `isPositive`. Finally, display the value of `isPositive` in the console.
+
+        const num = 122;
+        if(num%2==0){
+            let isPositive = num;
+            console.log("The number is : " + isPositive + " isPositive")
+        }
+        else{
+            console.log("Number is Negative")
+        }
+
+        // 2. Write a program that declares a variable `text` and assigns it a string value. Determine the length of the string and store the result in a variable called `length`. Display the value of `length` in the console.
+
+        let text = "Ayaz Ahamad";
+        let length = text.length;
+        console.log("The length of the Text is: " + length)
+
+        // 3. Write a program that declares an array called `fruits` containing three different fruit names. Add a new fruit to the array and store the resulting length of the array in a variable called `totalFruits`. Finally, display the value of `totalFruits` in the console.
+
+        const fruits = ["banana","apple","orange"]
+        const totalFruits = fruits.concat("sapota")
+
+        console.log(totalFruits)
+
+        // 4. Write a program that declares an object called `person` with properties `name`, `age`, and `country`. Assign appropriate values to these properties and display the person's information in the console.
+
+        const person = {
+            name : "Sajjad",
+            age : 22,
+            country : "India"
+        }
+        console.log(person)
+
+        // 5. Write a program that declares a variable `isTrue` and assigns it a boolean value. Check if the value of `isTrue` is `true` and store the result in a variable called `isValueTrue`. Finally, display the value of `isValueTrue` in the console.
+
+        let isTrue = true;
+        if(isTrue==true){
+            let isValueTrue = isTrue;
+            console.log("The isTrue Value is: " + isValueTrue)
+        }
+        else{
+            console.log("The isTrue Value is: " + isTrue)
+        }
+    </script>
+</body>
+</html>
