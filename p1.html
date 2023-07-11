@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Variables</title>
+</head>
+<body>
+    <h1>Javascript Variables</h1>
+    <p> JS Is a Dynamically typed Langauge, RunTime - (no need to declare variable type)</p>
+    <p>Variables are like a Containers</p>
+    <h3>Rules for choosing variables</h3>
+    <ol>
+        <li>letters, digits,underscores and $ sign is allowed.</li>
+        <li>Must begin with a $, _ , or a Letter.</li>
+        <li>JS reserved words are cannot be used.</li>
+        <li>Case sensitive (A & a is different).</li>
+    </ol>
+
+    <h2>Declare using 3 of 1 keywords</h2>
+    <ol>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+    </ol>
+    <ul>
+        <li>var - Old type (Used Before ES6)</li>
+        <li>var is Globally scoped</li>
+        <li>let and cont are block scoped</li>
+        <li>var can be updated redelared within it's scope</li>
+        <li>let can be updated but not redeclared</li>
+        <li>const can neither be updated nor be redeclared.</li>
+        <li>first Declare-and-Initialize</li>
+        <li>var - don't use <br>
+            let - use less <br>
+            const - use more</li>
+    </ul>
+    <h5>Certainly! Here are some basic questions on JavaScript variables for you to solve: <br><br>
+
+        1. Write a program that declares two variables, `num1` and `num2`, and assigns them values. Calculate the sum of these two variables and store the result in a variable called `sum`. Finally, display the value of `sum` in the console. <br><br>
+        
+        2. Write a program that declares three variables, `length`, `width`, and `height`, and assigns them values representing the dimensions of a rectangular box. Calculate the volume of the box by multiplying the three variables, and store the result in a variable called `volume`. Display the value of `volume` in the console. <br><br>
+        
+        3. Write a program that declares a variable `temperature` and assigns it a numerical value representing the temperature in Celsius. Convert this temperature to Fahrenheit and store the result in a variable called `fahrenheit`. Display the value of `fahrenheit` in the console. <br><br>
+        
+        4. Write a program that declares two variables, `firstName` and `lastName`, and assigns them string values representing a person's first and last name. Concatenate these two variables to create a full name and store it in a variable called `fullName`. Display the value of `fullName` in the console. <br><br>
+        
+        5. Write a program that declares a variable `age` and assigns it a numerical value representing a person's age. Determine if the person is an adult (age 18 or above) and store the result in a variable called `isAdult`. Display the value of `isAdult` in the console. <br><br>
+        
+        These questions involve basic calculations, string concatenation, and logical operations using variables in JavaScript. Solve them by writing the necessary code and executing the programs to get the expected output.</h5>
+    <script>
+        // 1. Write a program that declares two variables, `num1` and `num2`, and assigns them values. Calculate the sum of these two variables and store the result in a variable called `sum`. Finally, display the value of `sum` in the console.
+
+        let num1 = 5;
+        let num2 = 4;
+        let sum = num1 + num2;
+        console.log("The sum of 2 number is: " + sum);
+
+        // 2. Write a program that declares three variables, `length`, `width`, and `height`, and assigns them values representing the dimensions of a rectangular box. Calculate the volume of the box by multiplying the three variables, and store the result in a variable called `volume`. Display the value of `volume` in the console.
+
+        const length = 15;
+        const width = 10;
+        const height = 5;
+        const volume = length * width * height;
+        console.log("The volume of the box is: "+volume + " cm^3")
+
+        // 3. Write a program that declares a variable `temperature` and assigns it a numerical value representing the temperature in Celsius. Convert this temperature to Fahrenheit and store the result in a variable called `fahrenheit`. Display the value of `fahrenheit` in the console.
+
+        const temperature = 38;
+        const fahrenheit = temperature*(9/5) + 32;
+        console.log("Fahrenheit is "+ fahrenheit+"F");
+
+        // 4. Write a program that declares two variables, `firstName` and `lastName`, and assigns them string values representing a person's first and last name. Concatenate these two variables to create a full name and store it in a variable called `fullName`. Display the value of `fullName` in the console.
+
+        let firstName = "Ayaz";
+        let lastName = " Ahamad";
+        let fullName ="The fullName of the person is: "+ firstName + lastName;
+        console.log(fullName);
+
+        // 5. Write a program that declares a variable `age` and assigns it a numerical value representing a person's age. Determine if the person is an adult (age 18 or above) and store the result in a variable called `isAdult`. Display the value of `isAdult` in the console.
+
+        const age = 19;
+        if(age >= 18){
+            let isAdult = age;
+            console.log("The age is "+ isAdult +" person isAdult")
+            console.log(isAdult);
+        }  
+    </script>
+</body>
+</html>
