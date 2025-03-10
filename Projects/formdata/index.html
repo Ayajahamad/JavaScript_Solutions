@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Data</title>
+  </head>
+  <body>
+    <h2>Form Data</h2>
+
+    <form id="userForm">
+        <label>Name :</label>
+        <input type="text" name="" id="name"><br><br>
+
+        <label>Email :</label>
+        <input type="email" name="" id="email"><br><br>
+
+        <label>Number :</label>
+        <input type="number" name="" id="number"><br><br>
+
+        <input type="submit" value="Submit" id="btn">
+    </form>
+
+    <div id="parent">
+        
+    </div>
+
+
+    <script>
+        let user = [{
+            name:'abc',
+            email : 'ayaz@gmail.com',
+            number : 9897968689
+        }]
+
+        let btn = document.getElementById('btn')
+
+        btn.addEventListener('click',(e) => {
+            e.preventDefault()
+
+            let name = document.getElementById('name').value
+            let email = document.getElementById('email').value
+            let number = document.getElementById('number').value
+
+            user.push({'name':name,'email':email,'number':number})
+            console.log(user);
+
+            user.map((user)=>{
+                let parent = document.getElementById('parent')
+    
+                let div = document.createElement('div')
+                let h3 = document.createElement('h3')
+                let p = document.createElement('p')
+                let p1 = document.createElement('p')
+    
+    
+                p.innerText = user.email
+                p1.innerText = user.number
+                h3.innerText = user.name
+    
+                div.appendChild(h3)
+                div.appendChild(p1)
+                div.appendChild(p)
+                
+    
+                parent.appendChild(div)
+            })
+
+
+
+            clr()
+        })
+
+        function clr(){
+            document.getElementById('name').value = ""
+            document.getElementById('email').value = ""
+            document.getElementById('number').value = ""
+        }
+        
+
+        let ayaz = 'something'
+
+    </script>
+  </body>
+</html>

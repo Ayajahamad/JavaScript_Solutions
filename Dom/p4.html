@@ -1,0 +1,56 @@
+<button id="openModalButton">Open Modal</button>
+
+<div id="modal" style="display:none;">
+  <div id="modalContent">
+    <form id="myForm">
+      <input type="text" placeholder="Enter your name" required>
+      <button type="submit" id="submitButton">Submit</button>
+    </form>
+    <button id="closeModalButton">Close</button>
+  </div>
+</div>
+
+<script>
+  // Open modal functionality
+  const openModalButton = document.getElementById("openModalButton");
+  const modal = document.getElementById("modal");
+  const closeModalButton = document.getElementById("closeModalButton");
+  const submitButton = document.getElementById("submitButton");
+  const form = document.getElementById("myForm");
+
+  // Open modal when button is clicked
+  openModalButton.addEventListener("click", function() {
+    modal.style.display = "block"; // Show modal
+    addEventListeners(); // Add event listeners when modal opens
+  });
+
+  // Close modal and remove listeners
+  closeModalButton.addEventListener("click", function() {
+    modal.style.display = "none"; // Hide modal
+    removeEventListeners(); // Remove event listeners when modal is closed
+  });
+
+  // Add event listeners for form submission
+  function addEventListeners() {
+    form.addEventListener("submit", handleFormSubmit);
+  }
+
+  // Remove event listeners for form submission
+  function removeEventListeners() {
+    form.removeEventListener("submit", handleFormSubmit);
+  }
+
+  // Handle form submission
+  function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Simulate form submission
+    console.log("Form Submitted!");
+
+    // Close modal after submission
+    modal.style.display = "none";
+    
+    // Optionally, clean up listeners to prevent multiple submissions
+    removeEventListeners(); // Remove the submit listener after submission
+  }
+</script>

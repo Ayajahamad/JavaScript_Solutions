@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="parent" style="padding: 20px; background-color: lightblue;">
+        Parent Div
+        <button id="child">Click Me</button>
+    </div>
+      <!-- Example for event.stopImmediatePropagation() -->
+
+
+    <script>
+        const parentDiv = document.getElementById("parent");
+        const childButton = document.getElementById("child");
+
+        // Parent Div Listener
+        parentDiv.addEventListener("click", () => {
+        console.log("Parent Div Clicked");
+        });
+
+        // Child Button Listener 1
+        childButton.addEventListener("click", (event) => {
+        console.log("Child Button - First Listener");
+        event.stopImmediatePropagation(); // Stops propagation AND other listeners on the button
+        });
+
+        // Child Button Listener 2
+        childButton.addEventListener("click", () => {
+        console.log("Child Button - Second Listener"); // This won't execute
+        });
+
+    </script>
+</body>
+</html>

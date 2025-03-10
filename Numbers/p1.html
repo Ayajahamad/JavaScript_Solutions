@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prevent Default Example</title>
+</head>
+<body>
+    <a href="https://www.example.com" id="myLink">Go to Example</a>
+
+    <script>
+        const link = document.getElementById('myLink');
+
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevents the default navigation
+            alert('Link clicked, but no navigation occurs!');
+        });
+    </script>
+</body>
+</html>

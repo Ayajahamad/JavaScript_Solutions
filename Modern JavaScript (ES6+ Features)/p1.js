@@ -1,0 +1,12 @@
+/*
+Template literals
+Destructuring
+Spread and rest operators
+Arrow functions
+let and const
+Default parameters
+Classes
+Promises
+Symbol
+Iterators and Generators
+*/

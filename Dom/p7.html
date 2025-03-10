@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent" style="padding: 20px; background-color: lightblue;">
+        Parent Div
+        <button id="child">Click Me</button>
+    </div>
+      <!-- Example for event.stopPropagation() -->
+
+    <script>
+        const parentDiv = document.getElementById("parent");
+        const childButton = document.getElementById("child");
+
+        // Parent Div Listener
+        parentDiv.addEventListener("click", () => {
+        console.log("Parent Div Clicked");
+        });
+
+        // Child Button Listener
+        childButton.addEventListener("click", (event) => {
+        console.log("Child Button Clicked");
+        event.stopPropagation(); // Stops propagation to the parent
+        });
+
+        // Another Child Button Listener
+        childButton.addEventListener("click", () => {
+        console.log("Another Listener on Child Button");
+        });
+
+    </script>
+</body>
+</html>
+
+<!-- 
+Behavior When Clicking the Button:
+The click event is triggered on the childButton.
+event.stopPropagation() stops the event from bubbling up to the parent div.
+Other listeners on the childButton (like "Another Listener on Child Button") still execute. 
+-->

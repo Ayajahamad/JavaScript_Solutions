@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Changer</title>
+    <style>
+        .container {
+            height: 200px;
+            width: 200px;
+            border: 2px solid aqua;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn {
+            padding: 5px;
+            border: 2px solid gray;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Hello</h1>
+        <p>Changing the background color using LocalStorage..!</p>
+        <button class="btn" id="toggler">Toggle</button>
+    </div>
+
+    <script>
+        let toggler = document.getElementById('toggler');
+        let container = document.getElementById('container');
+
+        function doToggle() {
+            console.log('doToggle');
+            container.classList.toggle("dark");
+
+            if (container.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('theme');
+            console.log("Saved Theme:", savedTheme);
+
+            if (savedTheme === 'dark') {
+                container.classList.add('dark'); 
+            }
+        }
+
+        toggler.addEventListener('click', doToggle);
+    </script>
+</body>
+</html>
